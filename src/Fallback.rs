@@ -1,90 +1,90 @@
 
-pub fn Data_Ord_ordIntImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_concat() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_reverse() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_Partial_pokeImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_Partial_peekImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_unshiftAllImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_unsafeThawImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_unsafeFreezeImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_toAssocArrayImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_thawImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_spliceImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_sortByImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_shiftImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_pushAllImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_pushImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_popImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_pokeImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_peekImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_lengthImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_freezeImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_cloneImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_new() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Int_fromStringAsImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Int_fromNumberImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Int_toNumber() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Lazy_force() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Lazy_defer() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Int_toStringAs() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Symbol_unsafeCoerce() -> crate::UnknownType { crate::UnknownType::new(0) }
+pub fn Data_Ord_ordIntImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_concat() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_reverse() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_Partial_pokeImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_Partial_peekImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_unshiftAllImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_unsafeThawImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_unsafeFreezeImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_toAssocArrayImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_thawImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_spliceImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_sortByImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_shiftImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_pushAllImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_pushImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_popImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_pokeImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_peekImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_lengthImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_freezeImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_cloneImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_new() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Int_fromStringAsImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Int_fromNumberImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Int_toNumber() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Lazy_force() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Lazy_defer() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Int_toStringAs() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Symbol_unsafeCoerce() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
 
-pub fn Data_Ord_ordIntImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_concat() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_reverse() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_Partial_pokeImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_Partial_peekImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_unshiftAllImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_unsafeThawImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_unsafeFreezeImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_toAssocArrayImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_thawImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_spliceImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_sortByImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_shiftImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_pushAllImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_pushImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_popImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_pokeImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_peekImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_lengthImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_freezeImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_cloneImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_new() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Int_fromStringAsImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Int_fromNumberImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Int_toNumber() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Lazy_force() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Lazy_defer() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Int_toStringAs() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Symbol_unsafeCoerce() -> crate::UnknownType { crate::UnknownType::new(0) }
+pub fn Data_Ord_ordIntImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_concat() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_reverse() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_Partial_pokeImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_Partial_peekImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_unshiftAllImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_unsafeThawImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_unsafeFreezeImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_toAssocArrayImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_thawImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_spliceImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_sortByImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_shiftImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_pushAllImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_pushImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_popImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_pokeImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_peekImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_lengthImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_freezeImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_cloneImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_new() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Int_fromStringAsImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Int_fromNumberImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Int_toNumber() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Lazy_force() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Lazy_defer() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Int_toStringAs() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Symbol_unsafeCoerce() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
 
-pub fn Data_Ord_ordIntImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_concat() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_reverse() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_Partial_pokeImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_Partial_peekImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_unshiftAllImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_unsafeThawImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_unsafeFreezeImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_toAssocArrayImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_thawImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_spliceImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_sortByImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_shiftImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_pushAllImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_pushImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_popImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_pokeImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_peekImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_lengthImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_freezeImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_cloneImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Array_ST_new() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Int_fromStringAsImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Int_fromNumberImpl() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Int_toNumber() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Lazy_force() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Lazy_defer() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Int_toStringAs() -> crate::UnknownType { crate::UnknownType::new(0) }
-pub fn Data_Symbol_unsafeCoerce() -> crate::UnknownType { crate::UnknownType::new(0) }
+pub fn Data_Ord_ordIntImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_concat() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_reverse() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_Partial_pokeImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_Partial_peekImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_unshiftAllImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_unsafeThawImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_unsafeFreezeImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_toAssocArrayImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_thawImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_spliceImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_sortByImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_shiftImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_pushAllImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_pushImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_popImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_pokeImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_peekImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_lengthImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_freezeImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_cloneImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Array_ST_new() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Int_fromStringAsImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Int_fromNumberImpl() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Int_toNumber() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Lazy_force() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Lazy_defer() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Int_toStringAs() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
+pub fn Data_Symbol_unsafeCoerce() -> crate::UnknownType { crate::UnknownType::new(Record_a { ..Default::default() }) }
