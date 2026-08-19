@@ -16,15 +16,15 @@ pub fn Data_Show_showCharImpl(mut a0: char) -> String {
     format!("'{}'", a0)
 }
 
-pub fn Data_Show_showArrayImpl(mut f: crate::UnknownType, mut a0: crate::UnknownType) -> String {
+pub fn Data_Show_showArrayImpl(mut f: std::rc::Rc<dyn Fn(crate::UnknownType) -> String>, mut a0: crate::UnknownType) -> String {
     let arr = a0.unwrap_array();
     let mut s = String::from("[");
     for (i, x) in arr.iter().enumerate() {
         if i > 0 {
             s.push_str(",");
         }
-        let res = f.unwrap_func()(x.clone());
-        s.push_str(&res.unwrap_string());
+        let res = f(x.clone());
+        s.push_str(&res);
     }
     s.push_str("]");
     s

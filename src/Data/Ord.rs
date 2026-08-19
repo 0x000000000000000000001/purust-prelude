@@ -36,13 +36,12 @@ pub fn Data_Ord_ordBooleanImpl(mut lt: crate::UnknownType, mut eq: crate::Unknow
     }
 }
 
-pub fn Data_Ord_ordArrayImpl(mut f: crate::UnknownType, mut a0: crate::UnknownType, mut a1: crate::UnknownType) -> i64 {
+pub fn Data_Ord_ordArrayImpl(mut f: std::rc::Rc<dyn Fn(crate::UnknownType) -> std::rc::Rc<dyn Fn(crate::UnknownType) -> i64>>, mut a0: crate::UnknownType, mut a1: crate::UnknownType) -> i64 {
     let arr1 = a0.unwrap_array();
     let arr2 = a1.unwrap_array();
     let len = std::cmp::min(arr1.len(), arr2.len());
     for i in 0..len {
-        let res = f.unwrap_func()(arr1[i].clone()).unwrap_func()(arr2[i].clone());
-        let cmp = res.unwrap_int();
+        let cmp = f(arr1[i].clone())(arr2[i].clone());
         if cmp != 0 {
             return cmp;
         }

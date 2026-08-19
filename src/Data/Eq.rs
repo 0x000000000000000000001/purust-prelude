@@ -18,15 +18,15 @@ pub fn Data_Eq_eqBooleanImpl(mut a0: bool, mut a1: bool) -> bool {
     a0 == a1
 }
 
-pub fn Data_Eq_eqArrayImpl(mut f: crate::UnknownType, mut a0: crate::UnknownType, mut a1: crate::UnknownType) -> bool {
+pub fn Data_Eq_eqArrayImpl(mut f: std::rc::Rc<dyn Fn(crate::UnknownType) -> std::rc::Rc<dyn Fn(crate::UnknownType) -> bool>>, mut a0: crate::UnknownType, mut a1: crate::UnknownType) -> bool {
     let arr1 = a0.unwrap_array();
     let arr2 = a1.unwrap_array();
     if arr1.len() != arr2.len() {
         return false;
     }
     for (x, y) in arr1.iter().zip(arr2.iter()) {
-        let res = f.unwrap_func()(x.clone()).unwrap_func()(y.clone());
-        if !res.unwrap_bool() {
+        let res = f(x.clone())(y.clone());
+        if !res {
             return false;
         }
     }
