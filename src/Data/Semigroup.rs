@@ -1,5 +1,5 @@
-pub fn Data_Semigroup_concatString(mut a0: crate::UnknownType, mut a1: crate::UnknownType) -> crate::UnknownType {
-    crate::mk_string(&format!("{}{}", a0.init_string.as_ref().unwrap(), a1.init_string.as_ref().unwrap()))
+pub fn Data_Semigroup_concatString(mut a0: String, mut a1: String) -> String {
+    format!("{}{}", a0, a1)
 }
 
 pub fn Data_Semigroup_concatArray(mut a0: crate::UnknownType, mut a1: crate::UnknownType) -> crate::UnknownType {

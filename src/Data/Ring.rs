@@ -1,7 +1,7 @@
-pub fn Data_Ring_intSub(mut a: crate::UnknownType, mut b: crate::UnknownType) -> crate::UnknownType {
-    crate::mk_int(a.init_int.unwrap() - b.init_int.unwrap())
+pub fn Data_Ring_intSub(mut a: i64, mut b: i64) -> i64 {
+    a - b
 }
 
-pub fn Data_Ring_numSub(mut a: crate::UnknownType, mut b: crate::UnknownType) -> crate::UnknownType {
-    crate::mk_number(a.init_number.unwrap() - b.init_number.unwrap())
+pub fn Data_Ring_numSub(mut a: f64, mut b: f64) -> f64 {
+    a - b
 }
