@@ -17,14 +17,14 @@ pub fn Data_Show_showCharImpl(mut a0: char) -> String {
 }
 
 pub fn Data_Show_showArrayImpl(mut f: crate::UnknownType, mut a0: crate::UnknownType) -> String {
-    let arr = a0.init_array.as_ref().unwrap();
+    let arr = a0.unwrap_array();
     let mut s = String::from("[");
     for (i, x) in arr.iter().enumerate() {
         if i > 0 {
             s.push_str(",");
         }
-        let res = f.call.as_ref().unwrap()(x.clone());
-        s.push_str(res.init_string.as_ref().unwrap());
+        let res = f.unwrap_func()(x.clone());
+        s.push_str(&res.unwrap_string());
     }
     s.push_str("]");
     s

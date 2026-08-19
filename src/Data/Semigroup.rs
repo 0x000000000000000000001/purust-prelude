@@ -3,7 +3,7 @@ pub fn Data_Semigroup_concatString(mut a0: String, mut a1: String) -> String {
 }
 
 pub fn Data_Semigroup_concatArray(mut a0: crate::UnknownType, mut a1: crate::UnknownType) -> crate::UnknownType {
-    let mut vec = a0.init_array.as_ref().unwrap().to_vec();
-    vec.extend(a1.init_array.as_ref().unwrap().to_vec());
+    let mut vec = a0.unwrap_array().to_vec();
+    vec.extend(a1.unwrap_array().to_vec());
     crate::mk_array(vec)
 }

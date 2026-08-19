@@ -19,14 +19,14 @@ pub fn Data_Eq_eqBooleanImpl(mut a0: bool, mut a1: bool) -> bool {
 }
 
 pub fn Data_Eq_eqArrayImpl(mut f: crate::UnknownType, mut a0: crate::UnknownType, mut a1: crate::UnknownType) -> bool {
-    let arr1 = a0.init_array.as_ref().unwrap();
-    let arr2 = a1.init_array.as_ref().unwrap();
+    let arr1 = a0.unwrap_array();
+    let arr2 = a1.unwrap_array();
     if arr1.len() != arr2.len() {
         return false;
     }
     for (x, y) in arr1.iter().zip(arr2.iter()) {
-        let res = f.call.as_ref().unwrap()(x.clone()).call.as_ref().unwrap()(y.clone());
-        if !res.init_bool.unwrap() {
+        let res = f.unwrap_func()(x.clone()).unwrap_func()(y.clone());
+        if !res.unwrap_bool() {
             return false;
         }
     }
