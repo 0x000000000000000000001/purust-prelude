@@ -16,7 +16,7 @@ pub fn Data_Show_showCharImpl(mut a0: char) -> String {
     format!("'{}'", a0)
 }
 
-pub fn Data_Show_showArrayImpl(mut f: std::rc::Rc<dyn Fn(crate::UnknownType) -> String>, mut a0: crate::UnknownType) -> String {
+pub fn Data_Show_showArrayImpl(mut f: purust_core::Func1<crate::UnknownType, String>, mut a0: crate::UnknownType) -> String {
     let arr = a0.unwrap_array();
     let mut s = String::from("[");
     for (i, x) in arr.iter().enumerate() {
