@@ -36,12 +36,15 @@ pub fn Data_Ord_ordBooleanImpl(mut lt: std::rc::Rc<Purs_Data_Ordering::Ordering>
     }
 }
 
-pub fn Data_Ord_ordArrayImpl(mut f: purust_core::Func2<crate::UnknownType, crate::UnknownType, i64>, mut a0: crate::UnknownType, mut a1: crate::UnknownType) -> i64 {
+pub fn Data_Ord_ordArrayImpl<a: Clone + 'static>(mut f: purust_core::Func2<a, a, i64>, mut a0: crate::UnknownType, mut a1: crate::UnknownType) -> i64 {
     let arr1 = a0.unwrap_array();
     let arr2 = a1.unwrap_array();
     let len = std::cmp::min(arr1.len(), arr2.len());
     for i in 0..len {
-        let cmp = f(arr1[i].clone(), arr2[i].clone());
+        let cmp = f(
+            purust_core::unsafe_coerce::<crate::UnknownType, a>(arr1[i].clone()),
+            purust_core::unsafe_coerce::<crate::UnknownType, a>(arr2[i].clone())
+        );
         if cmp != 0 {
             return cmp;
         }
