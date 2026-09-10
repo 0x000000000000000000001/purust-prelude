@@ -3,7 +3,7 @@ pub fn Data_Bounded_bottomChar() -> char {
 }
 
 pub fn Data_Bounded_topChar() -> char {
-    '\u{FFFF}'
+    purust_core::purust_char_from_code_unit(0xffff)
 }
 
 pub fn Data_Bounded_bottomInt() -> i64 {

@@ -1,4 +1,4 @@
-pub fn Data_Ord_ordIntImpl(mut lt: std::rc::Rc<Purs_Data_Ordering::Ordering>, mut eq: std::rc::Rc<Purs_Data_Ordering::Ordering>, mut gt: std::rc::Rc<Purs_Data_Ordering::Ordering>, mut a: i64, mut b: i64) -> std::rc::Rc<Purs_Data_Ordering::Ordering> {
+pub fn Data_Ord_ordIntImpl(mut lt: Purs_Data_Ordering::Ordering, mut eq: Purs_Data_Ordering::Ordering, mut gt: Purs_Data_Ordering::Ordering, mut a: i64, mut b: i64) -> Purs_Data_Ordering::Ordering {
     match a.cmp(&b) {
         std::cmp::Ordering::Less => lt,
         std::cmp::Ordering::Equal => eq,
@@ -6,13 +6,13 @@ pub fn Data_Ord_ordIntImpl(mut lt: std::rc::Rc<Purs_Data_Ordering::Ordering>, mu
     }
 }
 
-pub fn Data_Ord_ordNumberImpl(mut lt: std::rc::Rc<Purs_Data_Ordering::Ordering>, mut eq: std::rc::Rc<Purs_Data_Ordering::Ordering>, mut gt: std::rc::Rc<Purs_Data_Ordering::Ordering>, mut a: f64, mut b: f64) -> std::rc::Rc<Purs_Data_Ordering::Ordering> {
+pub fn Data_Ord_ordNumberImpl(mut lt: Purs_Data_Ordering::Ordering, mut eq: Purs_Data_Ordering::Ordering, mut gt: Purs_Data_Ordering::Ordering, mut a: f64, mut b: f64) -> Purs_Data_Ordering::Ordering {
     if a < b { lt }
     else if a > b { gt }
     else { eq }
 }
 
-pub fn Data_Ord_ordCharImpl(mut lt: std::rc::Rc<Purs_Data_Ordering::Ordering>, mut eq: std::rc::Rc<Purs_Data_Ordering::Ordering>, mut gt: std::rc::Rc<Purs_Data_Ordering::Ordering>, mut a: char, mut b: char) -> std::rc::Rc<Purs_Data_Ordering::Ordering> {
+pub fn Data_Ord_ordCharImpl(mut lt: Purs_Data_Ordering::Ordering, mut eq: Purs_Data_Ordering::Ordering, mut gt: Purs_Data_Ordering::Ordering, mut a: char, mut b: char) -> Purs_Data_Ordering::Ordering {
     match a.cmp(&b) {
         std::cmp::Ordering::Less => lt,
         std::cmp::Ordering::Equal => eq,
@@ -20,7 +20,7 @@ pub fn Data_Ord_ordCharImpl(mut lt: std::rc::Rc<Purs_Data_Ordering::Ordering>, m
     }
 }
 
-pub fn Data_Ord_ordStringImpl(mut lt: std::rc::Rc<Purs_Data_Ordering::Ordering>, mut eq: std::rc::Rc<Purs_Data_Ordering::Ordering>, mut gt: std::rc::Rc<Purs_Data_Ordering::Ordering>, mut a: String, mut b: String) -> std::rc::Rc<Purs_Data_Ordering::Ordering> {
+pub fn Data_Ord_ordStringImpl(mut lt: Purs_Data_Ordering::Ordering, mut eq: Purs_Data_Ordering::Ordering, mut gt: Purs_Data_Ordering::Ordering, mut a: String, mut b: String) -> Purs_Data_Ordering::Ordering {
     match a.cmp(&b) {
         std::cmp::Ordering::Less => lt,
         std::cmp::Ordering::Equal => eq,
@@ -28,7 +28,7 @@ pub fn Data_Ord_ordStringImpl(mut lt: std::rc::Rc<Purs_Data_Ordering::Ordering>,
     }
 }
 
-pub fn Data_Ord_ordBooleanImpl(mut lt: std::rc::Rc<Purs_Data_Ordering::Ordering>, mut eq: std::rc::Rc<Purs_Data_Ordering::Ordering>, mut gt: std::rc::Rc<Purs_Data_Ordering::Ordering>, mut a: bool, mut b: bool) -> std::rc::Rc<Purs_Data_Ordering::Ordering> {
+pub fn Data_Ord_ordBooleanImpl(mut lt: Purs_Data_Ordering::Ordering, mut eq: Purs_Data_Ordering::Ordering, mut gt: Purs_Data_Ordering::Ordering, mut a: bool, mut b: bool) -> Purs_Data_Ordering::Ordering {
     match a.cmp(&b) {
         std::cmp::Ordering::Less => lt,
         std::cmp::Ordering::Equal => eq,
@@ -36,15 +36,12 @@ pub fn Data_Ord_ordBooleanImpl(mut lt: std::rc::Rc<Purs_Data_Ordering::Ordering>
     }
 }
 
-pub fn Data_Ord_ordArrayImpl<a: Clone + 'static>(mut f: purust_core::Func2<a, a, i64>, mut a0: crate::UnknownType, mut a1: crate::UnknownType) -> i64 {
+pub fn Data_Ord_ordArrayImpl(mut f: purust_core::Func2<crate::UnknownType, crate::UnknownType, i64>, mut a0: crate::UnknownType, mut a1: crate::UnknownType) -> i64 {
     let arr1 = a0.unwrap_array();
     let arr2 = a1.unwrap_array();
     let len = std::cmp::min(arr1.len(), arr2.len());
     for i in 0..len {
-        let cmp = f(
-            purust_core::unsafe_coerce::<crate::UnknownType, a>(arr1[i].clone()),
-            purust_core::unsafe_coerce::<crate::UnknownType, a>(arr2[i].clone())
-        );
+        let cmp = f(arr1[i].clone(), arr2[i].clone());
         if cmp != 0 {
             return cmp;
         }
