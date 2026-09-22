@@ -36,8 +36,54 @@ pub fn Data_Show_showIntImpl(mut a0: i64) -> String {
     a0.to_string()
 }
 
+// ECMAScript `Number::toString` (shortest round-trip digits, decimal notation
+// for 10^-6 <= |n| < 10^21, exponential outside), which is what the JS FFI
+// uses. Rust's `Display` never switches to exponent notation.
+fn js_number_to_string(n: f64) -> String {
+    if n.is_nan() {
+        return "NaN".to_owned();
+    }
+    if n == 0.0 {
+        return "0".to_owned();
+    }
+    if n < 0.0 {
+        return format!("-{}", js_number_to_string(-n));
+    }
+    if n.is_infinite() {
+        return "Infinity".to_owned();
+    }
+    // `{:e}` already gives the shortest round-trip digits and an exponent.
+    let formatted = format!("{:e}", n);
+    let (mantissa, exponent) = formatted.split_once('e').expect("exponent notation");
+    let exponent: i32 = exponent.parse().expect("decimal exponent");
+    let digits: String = mantissa.chars().filter(|c| *c != '.').collect();
+    let k = digits.len() as i32;
+    let point = exponent + 1;
+    if k <= point && point <= 21 {
+        format!("{}{}", digits, "0".repeat((point - k) as usize))
+    } else if 0 < point && point <= 21 {
+        let (head, tail) = digits.split_at(point as usize);
+        format!("{}.{}", head, tail)
+    } else if -6 < point && point <= 0 {
+        format!("0.{}{}", "0".repeat((-point) as usize), digits)
+    } else {
+        let exponent = point - 1;
+        let sign = if exponent >= 0 { "+" } else { "-" };
+        let (head, tail) = digits.split_at(1);
+        if tail.is_empty() {
+            format!("{}e{}{}", head, sign, exponent.abs())
+        } else {
+            format!("{}.{}e{}{}", head, tail, sign, exponent.abs())
+        }
+    }
+}
+
 pub fn Data_Show_showNumberImpl(mut a0: f64) -> String {
-    a0.to_string()
+    let str = js_number_to_string(a0);
+    // PureScript appends ".0" whenever the JavaScript text has no dot and no
+    // exponent (`isNaN(str + ".0")`).
+    let with_zero = format!("{}.0", str);
+    if with_zero.parse::<f64>().is_ok() { with_zero } else { str }
 }
 
 pub fn Data_Show_showCharImpl(character: char) -> String {

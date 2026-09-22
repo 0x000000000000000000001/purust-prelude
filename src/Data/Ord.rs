@@ -46,9 +46,11 @@ pub fn Data_Ord_ordArrayImpl(mut f: purust_core::Func2<crate::UnknownType, crate
             return cmp;
         }
     }
+    // `f` returns a delta where positive means "less than" (see `toDelta` in
+    // Data.Ord), so a longer first array must yield -1, not 1.
     match arr1.len().cmp(&arr2.len()) {
-        std::cmp::Ordering::Less => -1,
+        std::cmp::Ordering::Less => 1,
         std::cmp::Ordering::Equal => 0,
-        std::cmp::Ordering::Greater => 1,
+        std::cmp::Ordering::Greater => -1,
     }
 }
