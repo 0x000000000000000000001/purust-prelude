@@ -5,13 +5,11 @@ pub fn Control_Bind_arrayBind(mut arr: crate::UnknownType, mut f: purust_core::F
         panic!("arrayBind called with non-array!");
     }
     
-    let a = arr.unwrap_array();
     let mut result = Vec::new();
     
-    for item in a.iter() {
-        let mapped = f(item.clone());
-        let mapped_arr = mapped.unwrap_array();
-        result.extend(mapped_arr.iter().cloned());
+    for item in arr.array_iter() {
+        let mapped = f(item);
+        result.extend(mapped.array_iter());
     }
     
     crate::Value::Array(Rc::new(result))
